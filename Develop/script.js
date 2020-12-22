@@ -44,14 +44,62 @@ function generatePassword() {
 
 
         // Create a loop that will run code as many times as defined by user and will pull random characters based on criteria selected
+        // If/else statements laying out every scenario
+        // True, false, false, false
         if (upperCase === true && lowerCase === false && specialChar === false && numerical === false) {
             var comboOne = [];
             for (var i = 0; i < passLength; i++) {    
                 var comboOneUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
                 comboOne.push(comboOneUpp);
             } 
-            alert(comboOne);
+            console.log(comboOne);
+        // True, true, false, false
+        } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === false) {
+            var comboUppTwo = [];
+            var comboLowTwo = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboTwoUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
+                var comboTwoLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
+                comboUppTwo.push(comboTwoUpp);  
+                comboLowTwo.push(comboTwoLow);
+            }
+            var comboTwo = comboUppTwo.concat(comboLowTwo);
+            console.log(comboTwo);
+        // True, true, true, false
+        } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === false) {
+            var comboUppThree = [];
+            var comboLowThree = [];
+            var comboSpecThree = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboThreeUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
+                var comboThreeLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
+                var comboThreeSpec = passCombo.specCharacter[Math.floor(Math.random() * passLength)];
+                comboUppThree.push(comboThreeUpp);
+                comboLowThree.push(comboThreeLow);
+                comboSpecThree.push(comboThreeSpec);
+            }
+            var comboThree = comboUppThree.concat(comboLowThree, comboSpecThree);
+            console.log(comboThree);
+        // True, true, true, true
+        } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === true) {
+            var comboUppFour = [];
+            var comboLowFour = [];
+            var comboSpecFour = [];
+            var comboNumFour = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboFourUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
+                var comboFourLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
+                var comboFourSpec = passCombo.specCharacter[Math.floor(Math.random() * passLength)];
+                var comboFourNum = passCombo.passNumb[Math.floor(Math.random() * passLength)];
+                comboUppFour.push(comboFourUpp);
+                comboLowFour.push(comboFourLow);
+                comboSpecFour.push(comboFourSpec);
+                comboNumFour.push(comboFourNum);
+            }
+            var comboFour = comboUppFour.concat(comboLowFour, comboSpecFour, comboNumFour);
+            console.log(comboFour);
         }
+    
     
     
     } else {
