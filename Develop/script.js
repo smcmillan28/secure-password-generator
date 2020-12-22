@@ -49,37 +49,46 @@ function generatePassword() {
         if (upperCase === true && lowerCase === false && specialChar === false && numerical === false) {
             var comboOne = [];
             for (var i = 0; i < passLength; i++) {    
-                var comboOneUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
+                var comboOneUpp = passCombo.uppCase[Math.floor(Math.random() * passCombo.uppCase.length)];
                 comboOne.push(comboOneUpp);
             } 
             console.log(comboOne);
+            var randomComboOne = comboOne.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboOne = randomComboOne.join("");
+            console.log(finalComboOne);
         // True, true, false, false
         } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === false) {
             var comboUppTwo = [];
             var comboLowTwo = [];
             for (var i = 0; i < passLength; i++) {
-                var comboTwoUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
-                var comboTwoLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
+                var comboTwoUpp = passCombo.uppCase[Math.floor(Math.random() * passCombo.uppCase.length)];
+                var comboTwoLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
                 comboUppTwo.push(comboTwoUpp);  
                 comboLowTwo.push(comboTwoLow);
             }
             var comboTwo = comboUppTwo.concat(comboLowTwo);
             console.log(comboTwo);
+            var randComboTwo = comboTwo.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboTwo = randComboTwo.join("");
+            console.log(finalComboTwo);
         // True, true, true, false
         } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === false) {
             var comboUppThree = [];
             var comboLowThree = [];
             var comboSpecThree = [];
             for (var i = 0; i < passLength; i++) {
-                var comboThreeUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
-                var comboThreeLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
-                var comboThreeSpec = passCombo.specCharacter[Math.floor(Math.random() * passLength)];
+                var comboThreeUpp = passCombo.uppCase[Math.floor(Math.random() * passCombo.uppCase.length)];
+                var comboThreeLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                var comboThreeSpec = passCombo.specCharacter[Math.floor(Math.random() * passCombo.specCharacter.length)];
                 comboUppThree.push(comboThreeUpp);
                 comboLowThree.push(comboThreeLow);
                 comboSpecThree.push(comboThreeSpec);
             }
             var comboThree = comboUppThree.concat(comboLowThree, comboSpecThree);
             console.log(comboThree);
+            var randComboThree = comboThree.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboThree = randComboThree.join("");
+            console.log(finalComboThree);
         // True, true, true, true
         } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === true) {
             var comboUppFour = [];
@@ -87,10 +96,10 @@ function generatePassword() {
             var comboSpecFour = [];
             var comboNumFour = [];
             for (var i = 0; i < passLength; i++) {
-                var comboFourUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
-                var comboFourLow = passCombo.lowCase[Math.floor(Math.random() * passLength)];
-                var comboFourSpec = passCombo.specCharacter[Math.floor(Math.random() * passLength)];
-                var comboFourNum = passCombo.passNumb[Math.floor(Math.random() * passLength)];
+                var comboFourUpp = passCombo.uppCase[Math.floor(Math.random() * passCombo.uppCase.length)];
+                var comboFourLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                var comboFourSpec = passCombo.specCharacter[Math.floor(Math.random() * passCombo.specCharacter.length)];
+                var comboFourNum = passCombo.passNumb[Math.floor(Math.random() * passCombo.passNumb.length)];
                 comboUppFour.push(comboFourUpp);
                 comboLowFour.push(comboFourLow);
                 comboSpecFour.push(comboFourSpec);
@@ -98,8 +107,10 @@ function generatePassword() {
             }
             var comboFour = comboUppFour.concat(comboLowFour, comboSpecFour, comboNumFour);
             console.log(comboFour);
+            var randComboFour = comboFour.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboFour = randComboFour.join("");
+            console.log(finalComboFour);
         }
-    
     
     
     } else {
