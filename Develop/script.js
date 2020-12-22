@@ -26,7 +26,7 @@ function generatePassword() {
     // Starting password generator, defining length of password  
     var passLength = prompt("Time to create your password!  \n\nHow many characters would you like your password to be? It must be between 8 and 128 characters long. \n\nPlease enter a number.");
     
-    // Only moving on to next steps if password length is with acceptable character count
+    // Only moving on to next steps if password length is within acceptable character count
     if (passLength > 7 && passLength < 129) {
         
         // Move forward with remaining criteria selection
@@ -215,9 +215,9 @@ function generatePassword() {
             var finalComboTen = randComboTen.join("");
             console.log(finalComboTen);
 
+        
         }
 
-    
     
     } else {
         alert("Remember - Your password must be between 8 and 128 characters long.  Please try again.");
