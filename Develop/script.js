@@ -35,11 +35,22 @@ function generatePassword() {
         var specialChar = confirm("Would you like there to be any special characters (!, @, &, etc)? \nSelect 'Okay' for Yes, 'Cancel' for No.");
         var numerical = confirm("Would you like there to be numbers in your password? \nSelect 'Okay' for Yes, 'Cancel' for No.");
     
+        // Logging current values to the console
+        console.log(passLength);
+        console.log(upperCase);
+        console.log(lowerCase);
+        console.log(specialChar); 
+        console.log(numerical);
+
+
         // Create a loop that will run code as many times as defined by user and will pull random characters based on criteria selected
-        for (var i = 0; i = passLength; i++) {
-            
-
-
+        if (upperCase === true && lowerCase === false && specialChar === false && numerical === false) {
+            var comboOne = [];
+            for (var i = 0; i < passLength; i++) {    
+                var comboOneUpp = passCombo.uppCase[Math.floor(Math.random() * passLength)];
+                comboOne.push(comboOneUpp);
+            } 
+            alert(comboOne);
         }
     
     
@@ -48,9 +59,3 @@ function generatePassword() {
     }
 
 }
-
-// console.log(passLength);
-// console.log(upperCase);
-// console.log(lowerCase);
-// console.log(specialChar);
-// console.log(numerical);
