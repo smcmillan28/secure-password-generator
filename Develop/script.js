@@ -215,7 +215,84 @@ function generatePassword() {
             var finalComboTen = randComboTen.join("");
             console.log(finalComboTen);
 
-        
+        // False, true, false, true
+        } else if (upperCase === false && lowerCase === true && specialChar === false && numerical === true) {
+            var comboLowElev = [];
+            var comboNumElev = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboElevLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                var comboElevNum = passCombo.passNumb[Math.floor(Math.random() * passCombo.passNumb.length)];
+                comboLowElev.push(comboElevLow);  
+                comboNumElev.push(comboElevNum);
+            }
+            var comboElev = comboLowElev.concat(comboNumElev);
+            console.log(comboElev);
+            var randComboElev = comboElev.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboElev = randComboElev.join("");
+            console.log(finalComboElev);
+
+        // False, true, true, false
+        } else if (upperCase === false && lowerCase === true && specialChar === true && numerical === false) {
+            var comboLowTwel = [];
+            var comboSpecTwel = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboTwelLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                var comboTwelSpec = passCombo.specCharacter[Math.floor(Math.random() * passCombo.specCharacter.length)];
+                comboLowTwel.push(comboTwelLow);  
+                comboSpecTwel.push(comboTwelSpec);
+            }
+            var comboTwel = comboLowTwel.concat(comboSpecTwel);
+            console.log(comboTwel);
+            var randComboTwel = comboTwel.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboTwel = randComboTwel.join("");
+            console.log(finalComboTwel);
+
+        // False, true, false, false
+        } else if (upperCase === false && lowerCase === true && specialChar === false && numerical === false) {
+            var comboThir = [];
+            for (var i = 0; i < passLength; i++) {    
+                var comboThirLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                comboThir.push(comboThirLow);
+            } 
+            console.log(comboThir);
+            var randomComboThir = comboThir.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboThir = randomComboThir.join("");
+            console.log(finalComboThir);
+
+        // False, false, true, false
+        } else if (upperCase === false && lowerCase === false && specialChar === true && numerical === false) {
+            var comboFourt = [];
+            for (var i = 0; i < passLength; i++) {    
+                var comboFourtSpec = passCombo.specCharacter[Math.floor(Math.random() * passCombo.specCharacter.length)];
+                comboFourt.push(comboFourtSpec);
+            } 
+            console.log(comboFourt);
+            var randomComboFourt = comboFourt.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboFourt = randomComboFourt.join("");
+            console.log(finalComboFourt);
+
+        // True, true, false, true
+        } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === true) {
+            var comboUppFif = [];
+            var comboLowFif = [];
+            var comboNumFif = [];
+            for (var i = 0; i < passLength; i++) {
+                var comboFifUpp = passCombo.uppCase[Math.floor(Math.random() * passCombo.uppCase.length)];
+                var comboFifLow = passCombo.lowCase[Math.floor(Math.random() * passCombo.lowCase.length)];
+                var comboFifNum = passCombo.passNumb[Math.floor(Math.random() * passCombo.passNumb.length)];
+                comboUppFif.push(comboFifUpp);
+                comboLowFif.push(comboFifLow);
+                comboNumFif.push(comboFifNum);
+            }
+            var comboFif = comboUppFif.concat(comboLowFif, comboNumFif);
+            console.log(comboFif);
+            var randComboFif = comboFif.sort(() => Math.random() - Math.random()).slice(0, passLength);
+            var finalComboFif = randComboFif.join("");
+            console.log(finalComboFif);
+
+        // False, false, false, false (last scenario)
+        } else if (upperCase === false && lowerCase === false && specialChar === false && numerical === false) {
+            alert("You must select something.... \nPlease try again.");
         }
 
     
