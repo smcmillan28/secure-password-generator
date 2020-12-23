@@ -60,10 +60,6 @@ function generatePassword() {
             var finalComboOne = randomComboOne.join("");
             console.log(finalComboOne);
             document.body.children[0].children[1].children[1].textContent = "Your new password is: " +  finalComboOne;
-            // var passOne = document.createElement("p");
-            // passOne.textContent = "Your new password is: " +  finalComboOne;
-            // document.body.children[0].children[1].children[1].children[0].appendChild(passOne);
-            // document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboOne;
 
         // True, true, false, false
         } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === false) {
