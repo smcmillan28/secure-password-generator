@@ -1,4 +1,6 @@
 // Assignment Code
+console.log(window);
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -30,10 +32,10 @@ function generatePassword() {
     if (passLength > 7 && passLength < 129) {
         
         // Move forward with remaining criteria selection
-        var upperCase = confirm("Would you like there to be UPPERCASE letters? \nSelect 'Okay' for Yes, 'Cancel' for No.");
-        var lowerCase = confirm("Would you like there to be LOWERCASE letters? \nSelect 'Okay' for Yes, 'Cancel' for No.");
-        var specialChar = confirm("Would you like there to be any special characters (!, @, &, etc)? \nSelect 'Okay' for Yes, 'Cancel' for No.");
-        var numerical = confirm("Would you like there to be numbers in your password? \nSelect 'Okay' for Yes, 'Cancel' for No.");
+        var upperCase = confirm("Would you like there to be any UPPERCASE letters in your password? \nSelect 'Okay' for Yes, 'Cancel' for No.");
+        var lowerCase = confirm("Would you like there to be any LOWERCASE letters in your password? \nSelect 'Okay' for Yes, 'Cancel' for No.");
+        var specialChar = confirm("Would you like there to be any special characters in your password (!, @, &, etc)? \nSelect 'Okay' for Yes, 'Cancel' for No.");
+        var numerical = confirm("Would you like there to be any numbers in your password? \nSelect 'Okay' for Yes, 'Cancel' for No.");
     
         // Logging current criteria values to the console
         console.log(passLength);
@@ -57,6 +59,7 @@ function generatePassword() {
             var randomComboOne = comboOne.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboOne = randomComboOne.join("");
             console.log(finalComboOne);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " + finalComboOne;
 
         // True, true, false, false
         } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === false) {
@@ -75,6 +78,7 @@ function generatePassword() {
             var randComboTwo = comboTwo.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboTwo = randComboTwo.join("");
             console.log(finalComboTwo);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboTwo;
 
         // True, true, true, false
         } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === false) {
