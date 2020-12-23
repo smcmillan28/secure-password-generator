@@ -59,7 +59,7 @@ function generatePassword() {
             var randomComboOne = comboOne.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboOne = randomComboOne.join("");
             console.log(finalComboOne);
-            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " + finalComboOne;
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboOne;
 
         // True, true, false, false
         } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === false) {
@@ -98,6 +98,7 @@ function generatePassword() {
             var randComboThree = comboThree.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboThree = randComboThree.join("");
             console.log(finalComboThree);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboThree;
 
         // True, true, true, true
         } else if (upperCase === true && lowerCase === true && specialChar === true && numerical === true) {
@@ -120,6 +121,7 @@ function generatePassword() {
             var randComboFour = comboFour.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboFour = randComboFour.join("");
             console.log(finalComboFour);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboFour;
 
         // False, true, true, true
         } else if (upperCase === false && lowerCase === true && specialChar === true && numerical === true) {
@@ -139,6 +141,7 @@ function generatePassword() {
             var randComboFive = comboFive.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboFive = randComboFive.join("");
             console.log(finalComboFive);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboFive;
 
         // False, false, true, true
         } else if (upperCase === false && lowerCase === false && specialChar === true && numerical === true) {
@@ -155,6 +158,7 @@ function generatePassword() {
             var randComboSix = comboSix.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboSix = randComboSix.join("");
             console.log(finalComboSix);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboSix;
 
         // False, false, false, true
         } else if (upperCase === false && lowerCase === false && specialChar === false && numerical === true) {
@@ -167,6 +171,7 @@ function generatePassword() {
             var randomComboSev = comboSev.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboSev = randomComboSev.join("");
             console.log(finalComboSev);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboSev;
 
         // True, false, true, false
         } else if (upperCase === true && lowerCase === false && specialChar === true && numerical === false) {
@@ -183,6 +188,7 @@ function generatePassword() {
             var randComboEight = comboEight.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboEight = randComboEight.join("");
             console.log(finalComboEight);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboEight;
 
         // True, false, false, true
         } else if (upperCase === true && lowerCase === false && specialChar === false && numerical === true) {
@@ -199,6 +205,7 @@ function generatePassword() {
             var randComboNine = comboNine.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboNine = randComboNine.join("");
             console.log(finalComboNine);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboNine;
 
         // True, false, true, true
         } else if (upperCase === true && lowerCase === false && specialChar === true && numerical === true) {
@@ -218,6 +225,7 @@ function generatePassword() {
             var randComboTen = comboTen.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboTen = randComboTen.join("");
             console.log(finalComboTen);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboTen;
 
         // False, true, false, true
         } else if (upperCase === false && lowerCase === true && specialChar === false && numerical === true) {
@@ -234,6 +242,7 @@ function generatePassword() {
             var randComboElev = comboElev.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboElev = randComboElev.join("");
             console.log(finalComboElev);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboElev;
 
         // False, true, true, false
         } else if (upperCase === false && lowerCase === true && specialChar === true && numerical === false) {
@@ -250,6 +259,7 @@ function generatePassword() {
             var randComboTwel = comboTwel.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboTwel = randComboTwel.join("");
             console.log(finalComboTwel);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboTwel;
 
         // False, true, false, false
         } else if (upperCase === false && lowerCase === true && specialChar === false && numerical === false) {
@@ -262,6 +272,7 @@ function generatePassword() {
             var randomComboThir = comboThir.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboThir = randomComboThir.join("");
             console.log(finalComboThir);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboThir;
 
         // False, false, true, false
         } else if (upperCase === false && lowerCase === false && specialChar === true && numerical === false) {
@@ -274,6 +285,7 @@ function generatePassword() {
             var randomComboFourt = comboFourt.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboFourt = randomComboFourt.join("");
             console.log(finalComboFourt);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboFourt;
 
         // True, true, false, true
         } else if (upperCase === true && lowerCase === true && specialChar === false && numerical === true) {
@@ -293,6 +305,7 @@ function generatePassword() {
             var randComboFif = comboFif.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboFif = randComboFif.join("");
             console.log(finalComboFif);
+            document.body.children[0].children[1].children[1].innerHTML = "Your new password is: " +  finalComboFif;
 
         // False, false, false, false (last scenario)
         } else if (upperCase === false && lowerCase === false && specialChar === false && numerical === false) {
