@@ -309,7 +309,7 @@ function generatePassword() {
 
         // False, false, false, false (last scenario)
         } else if (upperCase === false && lowerCase === false && specialChar === false && numerical === false) {
-            alert("You must select something.... \nPlease try again.");
+            alert("You must select at least one (1) criterion.... \nPlease try again.");
         }
 
     
