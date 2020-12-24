@@ -46,9 +46,23 @@ Once you've made all of your selections, your password will generate and be pres
 
 ![Password](/Assets/images/password-final.JPG)
 
+Feel free to generate as many passwords as you'd like!
+
 ## Code Used
 
+HTML\
+CSS\
+JavaScript
+
 ## Project Takeaways
+This is my first project using JavaScript.  The generator function runs primarily through a series of conditional statements and for loops while referencing variables and arrays both defined locally and globally.  
+
+The code at times is repetitive, but that was done to cover every possible outcome during the criteria selection process.  There are sixteen (16) possible outcomes.  The use of Math.random and sort/splice was crucial for taking the new string of characters and actually creating the password. 
+
+I also used DOM manipulation to change the content of the page once the password was generated.  Overall, this project challenged my problem solving abilities and taught me some exciting new coding skills along the way.  
 
 ## Credits and Comments
+The HTML, CSS, and a few of the beginning JS lines were pre-written heading into the project.  I did some styling of my own, and of course added the bulk of the JavaScript.  
+
+I look forward to the next challenge!
 
