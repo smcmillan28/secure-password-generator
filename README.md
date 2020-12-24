@@ -1,5 +1,5 @@
 # Secure Password Generator
-This application generates a random, secure password based on a set of pre-existing rules and criteria set by the user.
+This application generates a random, secure password based on a set of pre-existing rules and criteria set by the user.  Check it out right here -> [Secure Password Generator!](https://smcmillan28.github.io/secure-password-generator/)
 
 This README will provide an overview of the application and breakdown how it works.
 
