@@ -6,9 +6,11 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   Commenting this code out to eliminate console error message when manipulating DOM in generatePassword function
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
 
 }
 
@@ -59,6 +61,8 @@ function generatePassword() {
             var randomComboOne = comboOne.sort(() => Math.random() - Math.random()).slice(0, passLength);
             var finalComboOne = randomComboOne.join("");
             console.log(finalComboOne);
+
+            // Writing password to body using DOM manipulation
             document.body.children[0].children[1].children[1].textContent = "Your new password is: " +  finalComboOne;
 
         // True, true, false, false
